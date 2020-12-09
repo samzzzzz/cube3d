@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 16:28:59 by home              #+#    #+#             */
-/*   Updated: 2020/12/09 14:05:05 by home             ###   ########.fr       */
+/*   Updated: 2020/12/09 17:59:22 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,17 @@
 
 int		ft_atoi_cub(char *str)
 {
-	int sign;
-	int res;
-
+	static int x;
+    int res;
 	res = 0;
-	sign = 1;
-	while (*str && (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r'
-				|| *str == '\v' || *str == '\f'))
-		str++;
-	if (*str == '-')
-		sign = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str && *str >= '0' && *str <= '9')
+	while ((str[x] > 'A' && str[x] < 'Z') ||
+		(str[x] == ' ' || str[x] == '\t' || str[x] == '\n' || str[x] == '\r'
+		 || str[x] == '\v' || str[x] == '\f'))
+    	x++;;
+	while (str[x] && str[x] >= '0' && str[x] <= '9')
 	{
-		res = res * 10 + (*str - 48);
-		str++;
-	}
-	return (res * sign);
+		res = res * 10 + (str[x] - 48);
+    	x++;
+    }
+    return (res);
 }

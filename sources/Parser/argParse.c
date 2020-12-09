@@ -6,7 +6,7 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 10:53:26 by home              #+#    #+#             */
-/*   Updated: 2020/12/09 15:59:57 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/09 18:12:22 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 void		arg_parse(int fd, char *line)
 {
 	int x;
+	int hauteur;
+	int largeur;
 	char recup[20];
 
 	x = 0;
+	hauteur = 0;
+	largeur = 0;
 	while (get_next_line(fd, &line))
 	{
 		while (line[x] != '\0')
@@ -29,12 +33,11 @@ void		arg_parse(int fd, char *line)
 					recup[x] = line[x];
 					x++;
 				}
-				printf("%s\n", recup);
-				break;
+				hauteur = ft_atoi_cub(recup);
+				largeur = ft_atoi_cub(recup);
 			}
 			x++;
 		}
-//		printf("%s\n",line);
-	}
+	} 
 	close(fd);
 }
