@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   background.c                                       :+:      :+:    :+:   */
+/*   Parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 10:44:43 by home              #+#    #+#             */
-/*   Updated: 2020/12/03 13:48:45 by home             ###   ########.fr       */
+/*   Created: 2020/12/11 14:32:05 by gcyril            #+#    #+#             */
+/*   Updated: 2020/12/11 14:35:09 by gcyril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
+#include "../includes/random.h"
 
-#include "./includes/random.h"
-
-void	background();
+char	argParse(int fd, char *line)
 {
-	while (++y < HEIGHT)
+	while (get_next_line(fd, &line))
 	{
-		x = -1;
-		while (++x < WIDTH)
-			img[y * WIDTH + x] = COLOR;
-	}
-}
+		while (line[parse.i])
+		{
+			if (line[parse.i] == 'R')
 
-*/

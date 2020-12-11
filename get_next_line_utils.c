@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
+/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 16:29:14 by home              #+#    #+#             */
-/*   Updated: 2020/12/09 16:16:19 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/11 13:26:16 by gcyril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/random.h"
+#include "includes/random.h"
 
 size_t	ft_strlen(const char *str)
 {

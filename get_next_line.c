@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
+/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 10:31:18 by home              #+#    #+#             */
-/*   Updated: 2020/12/09 16:18:14 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/11 13:26:13 by gcyril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/random.h"
-# define BUFFER_SIZE  32
+#include "includes/random.h"
 
 int	get_index(const char *str, int c)
 {

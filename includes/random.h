@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   random.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
+/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 08:58:07 by home              #+#    #+#             */
-/*   Updated: 2020/12/09 16:18:50 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/11 15:37:17 by gcyril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@
 # include "unistd.h"
 # include <fcntl.h>
 
-# define COLOR 0x00ffff
-# define BUFFER_SIZE  32
-# define HEIGHT	640
-# define WIDTH 480
+# define COLOR 5832883
+# define BUFFER_SIZE 32
 # define mapHEIGHT 24
 # define mapWIDTH 24
 
@@ -58,13 +56,26 @@ typedef struct		s_parse
 	int		ry;
 	int		error;
 	int		i;
+	int		j;
 	int		c;
 	int		sum;
+	int		resHeight;
+	int		resWidth;
+	char	*resParse;
+	char	*colorParse;
 
-
+	int		errorNumber;
 }					t_parse;
 
 t_parse parse;
+
+typedef struct		s_rgb
+{
+	int		red;
+	int		green;
+	int		blue;
+	int		res;
+}					t_rgb;
 
 typedef struct		s_pos
 {
@@ -86,8 +97,9 @@ int		keypress(int key, void *param);
 int		keyrelease(int key, void *param);
 
 int		find_char(char *str, char c);
-void		arg_parse(int fd, char *line);
-int		get_typecolor(char *line, int i, t_data *mlx_ptr);
+void	arg_parse(int fd, char *line);
+void	resParser(int fd, char *line);
+int		split_rgb(char *line);
 int		get_res(char *line, int i, t_data *mlx_ptr);
-
+int		ft_atoi_cub(char *str);
 #endif
