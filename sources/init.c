@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 17:14:42 by home              #+#    #+#             */
-/*   Updated: 2020/12/11 11:56:16 by gcyril           ###   ########.fr       */
+/*   Updated: 2020/12/14 19:50:55 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	init()
 	pcolor = 0xFFFFFF;
 	pos.px = 533;
 	pos.py = 233;
+	parse.r = 0;
+	parse.g = 0;
+	parse.b = 0;
 
 	data.mlx_ptr = mlx_init();
 	data.win_ptr = mlx_new_window(data.mlx_ptr, parse.resHeight, parse.resWidth, "title");

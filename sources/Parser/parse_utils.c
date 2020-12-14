@@ -6,7 +6,7 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 16:28:59 by home              #+#    #+#             */
-/*   Updated: 2020/12/11 17:03:27 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/14 20:01:38 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int		ft_atoi_cub(char *str)
 {
-	static int x;
+	int x;
     int res;
 	res = 0;
-	while (str[x] != ' ')
-		x++;
 	while (str[x] == ' ' || str[x] == '\t' || str[x] == '\n' || str[x] == '\r'
 		 || str[x] == '\v' || str[x] == '\f' )
     	x++;
@@ -27,30 +25,49 @@ int		ft_atoi_cub(char *str)
 		res = res * 10 + (str[x] - 48);
     	x++;
     }
+	printf("%d", x);
     return (res);
 }
 
-int		split_rgb(char *line)
+void		split_rgb(char *line)
 {
-	t_rgb	rgb;
+	int x;
 
-	while (line[parse.i] != '\0')
+	x = 0;
+	while (line[x])
 	{
-		rgb.red = ft_atoi_cub(&line[parse.i]);
-		rgb.res = rgb.red;
-		parse.i++;
-		if (line[parse.i] == ',')
+		if (line[x] > '0' && line[x] < '9')
 		{
-			parse.i++;
-			rgb.green = ft_atoi_cub(&line[parse.i]);
-			rgb.res = (rgb.res << 8) + rgb.green;
-			if (line[parse.i] == ',')
-			{
-				parse.i++;
-				rgb.blue = ft_atoi_cub(&line[parse.i]);
-				rgb.res = (rgb.res << 8) + rgb.blue;
+			while (line[x] && line[x] >= '0' && line[x] <= '9')
+			{	
+				parse.r = parse.r * 10 + (line[x] -  48);
+				x++;
+			}
+			x++;
+			while (line[x] && line[x] >= '0' && line[x] <= '9')
+			{	
+				parse.g = parse.g * 10 + (line[x] -  48);
+				x++;
+			}
+			x++;
+			while (line[x] && line[x] >= '0' && line[x] <= '9')
+			{	
+				parse.b = parse.b * 10 + (line[x] -  48);
+				x++;
 			}
 		}
+		x++;
 	}
-	return (rgb.res);
+	printf("%d\n %d\n %d\n", parse.r, parse.g, parse.b);
+}
+
+int	convert(int r, int g, int b)
+{
+	int	result;
+
+	result = 0;
+  	result += r << 16;
+  	result += g << 8;
+  	result += b;
+  	return (result);
 }

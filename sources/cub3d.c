@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 12:08:46 by home              #+#    #+#             */
-/*   Updated: 2020/12/11 15:46:29 by gcyril           ###   ########.fr       */
+/*   Updated: 2020/12/14 19:12:12 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	line = NULL;
 	arg_parse(fd, line);
 	//init();
-	//mlx_hook(data.win_ptr, 2, (1L<<0), &keypress, (void*)0);
-	//mlx_hook(data.win_ptr, 3, (1L<<1), &keyrelease, (void*)0);
-	//mlx_loop(data.mlx_ptr);
+//	mlx_hook(data.win_ptr, 2, (1L<<0), &keypress, (void*)0);
+//	mlx_hook(data.win_ptr, 3, (1L<<1), &keyrelease, (void*)0);
+//	mlx_loop(data.mlx_ptr);
 }
