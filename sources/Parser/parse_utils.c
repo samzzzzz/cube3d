@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 16:28:59 by home              #+#    #+#             */
-/*   Updated: 2020/12/11 15:58:25 by gcyril           ###   ########.fr       */
+/*   Updated: 2020/12/11 17:03:27 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ int		ft_atoi_cub(char *str)
 	static int x;
     int res;
 	res = 0;
-	while ((str[x] > 'A' && str[x] < 'Z') ||
-		(str[x] == ' ' || str[x] == '\t' || str[x] == '\n' || str[x] == '\r'
-		 || str[x] == '\v' || str[x] == '\f'))
+	while (str[x] != ' ')
+		x++;
+	while (str[x] == ' ' || str[x] == '\t' || str[x] == '\n' || str[x] == '\r'
+		 || str[x] == '\v' || str[x] == '\f' )
     	x++;
 	while (str[x] && str[x] >= '0' && str[x] <= '9')
 	{

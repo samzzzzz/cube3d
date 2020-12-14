@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argParse.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 10:53:26 by home              #+#    #+#             */
-/*   Updated: 2020/12/11 16:12:52 by gcyril           ###   ########.fr       */
+/*   Updated: 2020/12/14 16:05:04 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		arg_parse(int fd, char *line)
 	parse.j = 0;
 	parse.resHeight = 0;
 	parse.resWidth = 0;
-	if (!(parse.resParse = malloc(sizeof(char)*parse.i)))
+	if (!(parse.resParse = malloc(sizeof(char)*100)))
 	{
 		printf("error with malloc size in resParse");
 		exit(0);
@@ -27,6 +27,7 @@ void		arg_parse(int fd, char *line)
 	{
 		while (line[parse.i] != '\0')
 		{
+		
 			if (line[parse.i] == 'R')
 			{
 				while (line[parse.i] != '\0')
@@ -39,23 +40,13 @@ void		arg_parse(int fd, char *line)
 				printf("resHeight is %d\n", parse.resHeight);
 				printf("resWidth is %d\n", parse.resWidth);
 			}
-			if (line[parse.i] == 'F' || line[parse.i] == 'C')
-			{
-				printf("test");
-				while (line[parse.i] != '\0')
-				{
-					int res_rgb = split_rgb(line);
-					if (line[parse.i] == 'F')
-					{
-						printf("floor color is %d\n", res_rgb);
-						printf("test");
-					}
-					else if (line[parse.i] == 'C')
-						printf("ceiling color is %d\n", res_rgb);
-				}
+			if (line[parse.i] == 'F')
+			{ 
+				printf("%c", 'a');
 			}
-			parse.i++;
+		parse.i++;
 		}
+	//	printf("%s\n",line);
 	}
 	free(parse.resParse);
 	close(fd);
