@@ -6,7 +6,7 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 17:14:42 by home              #+#    #+#             */
-/*   Updated: 2020/12/14 19:50:55 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/15 17:18:28 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	init()
 	parse.r = 0;
 	parse.g = 0;
 	parse.b = 0;
-
 	data.mlx_ptr = mlx_init();
 	data.win_ptr = mlx_new_window(data.mlx_ptr, parse.resHeight, parse.resWidth, "title");
 }

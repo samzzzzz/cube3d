@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   drawplayer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 10:54:52 by home              #+#    #+#             */
-/*   Updated: 2020/12/07 15:49:22 by home             ###   ########.fr       */
+/*   Updated: 2020/12/15 14:21:34 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	drawPlayer(float px, float py)
 {
 	mlx_clear_window(data.mlx_ptr, data.win_ptr);
+	drawMap();
 	mlx_pixel_put(data.mlx_ptr, data.win_ptr, pos.px, pos.py, pcolor);
 }
 

@@ -6,7 +6,7 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 16:28:59 by home              #+#    #+#             */
-/*   Updated: 2020/12/14 20:01:38 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/15 15:04:03 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int		ft_atoi_cub(char *str)
 		res = res * 10 + (str[x] - 48);
     	x++;
     }
-	printf("%d", x);
     return (res);
 }
 
@@ -58,7 +57,6 @@ void		split_rgb(char *line)
 		}
 		x++;
 	}
-	printf("%d\n %d\n %d\n", parse.r, parse.g, parse.b);
 }
 
 int	convert(int r, int g, int b)
