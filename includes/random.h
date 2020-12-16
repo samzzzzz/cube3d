@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   random.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcyril <gcyril@42.student.fr>              +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 08:58:07 by home              #+#    #+#             */
-/*   Updated: 2020/12/11 15:37:17 by gcyril           ###   ########.fr       */
+/*   Updated: 2020/12/15 15:25:08 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ typedef struct		s_parse
 	int		j;
 	int		c;
 	int		sum;
+	int		r;
+	int 	b;
+	int		g;
 	int		resHeight;
 	int		resWidth;
 	char	*resParse;
@@ -87,19 +90,18 @@ t_pos pos;
 int pcolor;
 
 void *param;
-
 void	drawPlayer(float px, float py);
-
+int		convert(int r, int g, int b);
 void	size1();
 void	init();
 void	drawMap();
+void	drawMap2(int a, int b);
 int		keypress(int key, void *param);
 int		keyrelease(int key, void *param);
-
 int		find_char(char *str, char c);
 void	arg_parse(int fd, char *line);
 void	resParser(int fd, char *line);
-int		split_rgb(char *line);
+void	split_rgb(char *line);
 int		get_res(char *line, int i, t_data *mlx_ptr);
 int		ft_atoi_cub(char *str);
 #endif
