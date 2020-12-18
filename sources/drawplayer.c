@@ -6,11 +6,11 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 10:54:52 by home              #+#    #+#             */
-/*   Updated: 2020/12/15 14:21:34 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/18 17:56:36 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/random.h"
+#include "../includes/header/random.h"
 
 void	drawPlayer(float px, float py)
 {

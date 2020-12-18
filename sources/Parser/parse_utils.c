@@ -6,19 +6,21 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 16:28:59 by home              #+#    #+#             */
-/*   Updated: 2020/12/15 15:04:03 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/18 04:33:05 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/random.h"
+#include "../../includes/header/random.h"
 
 int		ft_atoi_cub(char *str)
 {
 	int x;
     int res;
-	res = 0;
+	
+	res = 0;	
+	x = 0;
 	while (str[x] == ' ' || str[x] == '\t' || str[x] == '\n' || str[x] == '\r'
-		 || str[x] == '\v' || str[x] == '\f' )
+		 || str[x] == '\v' || str[x] == '\f' || str[x] == 'R')
     	x++;
 	while (str[x] && str[x] >= '0' && str[x] <= '9')
 	{

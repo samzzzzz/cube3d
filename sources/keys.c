@@ -6,11 +6,11 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 09:49:36 by home              #+#    #+#             */
-/*   Updated: 2020/12/15 14:26:40 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/18 04:36:02 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/random.h"
+#include "../includes/header/random.h"
 
 int		keypress(int key, void *param)
 {

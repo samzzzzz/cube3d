@@ -3,11 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   mapParser.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 14:27:53 by home              #+#    #+#             */
-/*   Updated: 2020/12/08 09:24:48 by home             ###   ########.fr       */
+/*   Updated: 2020/12/18 04:38:54 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/random.h"
+#include "../../includes/header/random.h"

@@ -6,19 +6,19 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 12:08:46 by home              #+#    #+#             */
-/*   Updated: 2020/12/15 17:20:09 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/18 04:36:09 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/random.h"
+#include "../includes/header/random.h"
 
 int main(int argc, char **argv)
 {
 	int fd;
 	char *line;
-
 	fd = open(argv[argc-1], O_RDONLY);
 	line = NULL;
+	
 	arg_parse(fd, line);
 	init();
 	drawMap();

@@ -6,11 +6,11 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 17:14:42 by home              #+#    #+#             */
-/*   Updated: 2020/12/15 17:18:28 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/18 04:36:16 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/random.h"
+#include "../includes/header/random.h"
 
 void	init()
 {

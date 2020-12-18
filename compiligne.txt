@@ -1,5 +1,1 @@
-pwd cub3d/sources/
-
-gcc -g -I ../MinilibX/minilibx_opengl_20191021 cub3d.c -L ../MinilibX/minilibx_opengl_20191021/ -lmlx -framework OpenGL -framework AppKit init.c drawplayer.c keys.c maptest.c Parser/argParse.c  ../get_next_line.c  ../get_next_line_utils.c ./Parser/parse_utils.c ./Parser/resParser.c
-
-a.out ../map.cub
+gcc -g -I includes/MinilibX/minilibx_opengl_20191021 sources/cub3d.c -L includes/MinilibX/minilibx_opengl_20191021/ -lmlx -framework OpenGL -framework AppKit sources/init.c sources/drawplayer.c sources/keys.c sources/maptest.c sources/Parser/argParse.c  includes/gnl/get_next_line.c  includes/gnl/get_next_line_utils.c sources/Parser/parse_utils.c includes/libft/ft_substr.c includes/libft/ft_strcat.c

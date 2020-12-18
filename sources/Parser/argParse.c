@@ -6,11 +6,11 @@
 /*   By: samuelchetrit <samuelchetrit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 10:53:26 by home              #+#    #+#             */
-/*   Updated: 2020/12/15 15:00:12 by samuelchetr      ###   ########.fr       */
+/*   Updated: 2020/12/18 04:32:06 by samuelchetr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/random.h"
+#include "../../includes/header/random.h"
 
 void		arg_parse(int fd, char *line)
 {
@@ -18,10 +18,14 @@ void		arg_parse(int fd, char *line)
 	parse.j = 0;
 	parse.resHeight = 0;
 	parse.resWidth = 0;
-	char str[20];
-	int couleur;
+	int x;
+	int y;
+	char **str;
+	str = NULL;
 
-	couleur = 0;
+	map.map = malloc(sizeof(char *) * (15));
+	x = 0;
+	y = 0;
 	if (!(parse.resParse = malloc(sizeof(char)*100)))
 	{
 		printf("error with malloc size in resParse");
@@ -32,7 +36,6 @@ void		arg_parse(int fd, char *line)
 		parse.i = 0;
 		while (line[parse.i] != '\0')
 		{
-		
 			if (line[parse.i] == 'R')
 			{
 				while (line[parse.i] != '\0')
@@ -42,21 +45,28 @@ void		arg_parse(int fd, char *line)
 				}
 				parse.resHeight = ft_atoi_cub(parse.resParse);
 				parse.resWidth = ft_atoi_cub(parse.resParse);
-				//parse.resParse = NULL;
-			//	printf("resHeight is %d\n", parse.resHeight);
-			//	printf("resWidth is %d\n", parse.resWidth);
+				parse.resParse = NULL;
 			}
 			if (line[parse.i] == 'F')
 			{ 
 				
 				split_rgb(line);
 				convert(parse.r, parse.g, parse.b);
-				//printf("%x", convert(parse.r, parse.g, parse.b));
 			}
-		parse.i++;
+			parse.i++; 
 		}
-		//	printf("%s\n",line);
+		if (line[0] == '1')
+		{
+			map.map[x] = malloc(sizeof(char) * (ft_strlen(line) + 1));
+			if (map.size_Longueur < ft_strlen(line))
+				map.size_Longueur = ft_strlen(line);
+			map.map[x] = line;
+			x++;
+		}
 	}
+	map.size_Largeur = x + 1;
+	map.map[x] = line;
+	map.map[x + 1] = NULL;
 	free(parse.resParse);
 	close(fd);
 }
